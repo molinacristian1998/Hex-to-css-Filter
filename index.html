@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador de filtro</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+
+    <fieldset>
+      <label>Color Buscado</label>
+
+      <span>
+        <input class="target" type="text" placeholder="target hex" value="#00a4d6" />
+        <button class="execute">Generar Filtros</button>
+      </span>
+    </fieldset>
+    <main>
+      <div>
+        <p>Color real en hexadecimal</p>
+        <div class="pixel realPixel"></div>
+      </div>
+
+      <div>
+        <p>Color filtrado con css filter</p>
+        <div class="pixel filterPixel"></div>
+      </div>
+
+      <p class="filterDetail"></p>
+      <p class="lossDetail"></p>
+
+      <button class="copy">Copiar al portapapeles</button>
+      <p>El filtro sólo funciona si el color base es negro.</p>
+    </main>
+
+    <div class="original">
+      <p>El objetivo es usar éstos filtros para poder cambiar el color de los íconos.</p>
+
+      <p>Código original de <a href="https://codepen.io/sosuke/pen/Pjoqqp">Barrett Sonntag</a></p>
+
+      <p>El mismo está basado en <a href="https://stackoverflow.com/a/43960991/604861">éste generador de filtros para rgb</a></p>
+      <p>
+        Si el set de íconos no es negro puedes anteponer "brightness(0) saturate(100%)" a tus propiedades de filtros que convertiran al set de íconos a negro.
+      </p>
+    </div>
+
+    <!-- partial -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
